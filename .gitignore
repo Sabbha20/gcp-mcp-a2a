@@ -1,0 +1,60 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venvvenv/
+env/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# GCP (Google Cloud Platform)
+gcp-creds.json
+google-services.json
+.gcp-credentials
+service-account-key.json
+
+# Vertex AI
+vertex_ai_config.json
+vertex_ai_credentials.json
+.vertex_ai
+models/
+predictions/
+artifacts/
+
+# MCP (Model Context Protocol)
+.mcp-cache
+mcp_logs/
+mcp_config.local.json
+
+# A2A (API-to-API)
+a2a_config.local.json
+a2a_cache/
+api_keys.json
+
+# Environment and local configuration
+.env
+.env.local
+.env.*.local
+config/local/
+
+# Logs and temporary files
+*.log
+logs/
+tmp/
+temp/
+.cache/
+
+# OS-specific files
+Thumbs.db
+.Thumbs.db
