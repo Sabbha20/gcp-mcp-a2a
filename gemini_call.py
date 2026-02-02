@@ -6,7 +6,7 @@ load_dotenv()
 
 client = Client()
 
-gconfigs = {"contents":"Tell me a joke about computers. In 1-2 lines",
+gconfigs = {"contents":"Tell me a joke about computers.",
 "model":"gemini-2.5-flash"}
 
 # input_tokens = client.models.count_tokens(**gconfigs)
@@ -15,8 +15,8 @@ gconfigs = {"contents":"Tell me a joke about computers. In 1-2 lines",
 response = client.models.generate_content(
     **gconfigs, 
     config=types.GenerateContentConfig(
-        thinking_config=types.ThinkingConfig(thinking_budget=0)
-    )
+        thinking_config=types.ThinkingConfig(thinking_budget=300)
+        )
     )
 
 print(f"Response: {response.text}")
