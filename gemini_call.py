@@ -6,8 +6,10 @@ load_dotenv()
 
 client = Client()
 
-gconfigs = {"contents":"Tell me a joke about computers.",
-"model":"gemini-2.5-flash"}
+gconfigs = {
+    "contents":"Tell me a joke about computers.",
+    "model":"gemini-2.5-flash"
+    }
 
 # input_tokens = client.models.count_tokens(**gconfigs)
 # print(f"Input tokens: {input_tokens.total_tokens}, \n {input_tokens}")
@@ -15,7 +17,14 @@ gconfigs = {"contents":"Tell me a joke about computers.",
 response = client.models.generate_content(
     **gconfigs, 
     config=types.GenerateContentConfig(
-        thinking_config=types.ThinkingConfig(thinking_budget=300)
+        thinking_config=types.ThinkingConfig(thinking_budget=300),
+        max_output_tokens=700,
+        safety_settings=[
+            types.SafetySetting(
+                category=types.HarmCategory.HARM_CATEGORY_HATE_SPEECH,
+                threshold=types.HarmBlockThreshold.BLOCK_ONLY_HIGH,
+            )
+        ]
         )
     )
 
