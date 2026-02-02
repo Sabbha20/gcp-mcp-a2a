@@ -1,2 +1,4 @@
 google-genai
 google-auth
+google
+python-dotenv
