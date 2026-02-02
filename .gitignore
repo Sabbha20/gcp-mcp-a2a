@@ -7,7 +7,7 @@ wheels/
 *.egg-info
 
 # Virtual environments
-.venvvenv/
+.venv/
 env/
 
 # IDE and editor files
@@ -23,6 +23,7 @@ gcp-creds.json
 google-services.json
 .gcp-credentials
 service-account-key.json
+ambient-stone-483406-p9-f12d1a567f27.json
 
 # Vertex AI
 vertex_ai_config.json
